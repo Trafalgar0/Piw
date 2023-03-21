@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --gray: #3B3B3B;
+
+    --wierd-blue: #A5B3FF;
+
+    --bluish-gray: #E5EEFF;
+
+    --almost-brown: #6C4801;
+
+    --yellow-i-think: #FFC044;
+
+    --lighter-yellow: #FFF8E4;
+
+    --white: #FFFFFF;
+
+    --outer-radius: 1rem;
+    --inner-radius: 0.25rem;
+
+    --large-font-size: 2rem;
+    --medium-font-size: 1.125rem;
+    --small-font-size: 1rem;
+
+    --hover-transition: all 0.3s ease-in-out;
+
+    --shadow: 0px 4px 16px rgba(67, 81, 80, 0.1);
+
+    --line: 64px
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    margin: 0px 100px;
+    column-gap: 20px;
+}
+
+.navbar{
+    background-color: var(--white);
+    padding: 1.5rem 100px;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    column-gap: 3rem;
+    text-decoration: none;
+    list-style-type: none;
+    align-items: center;
+}
+
+.menu-item{
+    color: var(--gray);
+    font-size: var(--small-font-size);
+    text-decoration: none;
+}
+
+.menu-item:hover {
+    color: var(--wierd-blue);
+    transition: var(--hover-transition);
+}
+
+.logo{
+    color: var(--gray);
+    font-weight: bold;
+    font-size: var(--large-font-size);
+}
+
+.yellow-i-think {
+    color: var(--gray);
+    background-color: var(--yellow-i-think);
+}
+
+.yellow-i-think:hover {
+    color: var(--gray);
+    background-color: var(--lighter-yellow);
+    transition: var(--hover-transition);
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 0.9rem;
+    border-radius: var(--inner-radius);
+    cursor: pointer;
+}
+
+.home {
+    height: 100vh;
+}
+
+.home-image{
+    position: absolute;
+    width: 675.71px;
+    height: 818.76px;
+    left: 1053px;
+    top: 114px;
+    
+    background: url(./assets/hero\ image.png);
+
+}
+
+.home-image[mode="horizontal"]{
+    height: 100%;
+}
+
+.home-dots{
+    position: absolute;
+    width: 270px;
+    height: 114.13px;
+    left: 245px;
+    top: 335px;
+    background-image: url(./assets/dots\ hero\ section.svg);
+}
+
+.text-set{
+    line-height: var(--line); 
+    text-align: center;   
+    color: var(--gray);
+}
+
+.home-text {
+    position: absolute;
+    width: 560px;
+    height: 64px;
+    left: 246px;
+    top: 347px;
+    
+    font-size: var(--large-font-size)
+}
+
+.home-uder-text{
+    position: absolute;
+    width: 450px;
+    height: 64px;
+    left: 301px;
+    top: 383px;
+    
+    font-size: var(--small-font-size)
+}
+
+.home-box{
+    box-sizing: border-box;
+    width: 560px;
+    height: 64px;
+    border: 1px solid var(--wierd-blue);
+    border-radius: 4px;
+}
+
+.login-box{
+    position: absolute;
+    left: 245px;
+    top: 523px;
+}
+
+.pass-box{
+    position: absolute;
+    left: 245px;
+    top: 645px;
+}
+
+
+.login-text{
+    position: absolute;
+    left: 245px;
+    top: 477px;
+}
+
+.pass-text{
+    position: absolute;
+    left: 245px;
+    top: 599px;
+}
+
+.forgot-text{
+    position: absolute;
+    left: 671px;
+    top: 697px;
+}
+
+.no-acc{
+    position: absolute;
+    left: 245px;
+    top: 697px;
+}
+
+.log{
+    position: absolute;
+    width: 80px;
+    height: 50px;
+    left: 478px;
+    top: 781px;
+}
+
+.about-dots{
+    position: absolute;
+    width: 330px;
+    height: 114.13px;
+    left: 1051px;
+    top: 1191px;
+    background-image: url(./assets/dots\ about\ section.svg);
+}
+
+.about-pos{
+    position: absolute;
+    width: 805px;
+    height: 64px;
+    left: 565px;
+    top: 1209px;
+
+    font-size: var(--large-font-size)
+}
+
+.about-back{
+    position: absolute;
+    width: 1720px;
+    height: 654px;
+    left: 100px;
+    top: 1388px;
+
+    background: var(--lighter-yellow);
+    border-radius: 8px;
+}
