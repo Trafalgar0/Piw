@@ -25,8 +25,6 @@
     --hover-transition: all 0.3s ease-in-out;
 
     --shadow: 0px 4px 16px rgba(67, 81, 80, 0.1);
-
-    --line: 64px
 }
 
 html{
@@ -42,9 +40,11 @@ html{
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(12,1fr);
+    grid-template-columns: repeat(24,0.5fr);
+    grid-template-rows: repeat(24,0.5fr);
     margin: 0px 100px;
-    column-gap: 20px;
+    column-gap: 10px;
+    row-gap: 10px;
 }
 
 .navbar{
@@ -105,137 +105,157 @@ button{
 
 .home {
     height: 100vh;
+    padding-top: 70px;
 }
 
 .home-image{
-    position: absolute;
-    width: 675.71px;
-    height: 818.76px;
-    left: 1053px;
-    top: 114px;
-    
-    background: url(./assets/hero\ image.png);
-
-}
-
-.home-image[mode="horizontal"]{
-    height: 100%;
+    grid-row: 2/25;
+    grid-column: 14/24;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: var(--outer-radius);
+    background-image: url(./assets/hero\ image.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
 }
 
 .home-dots{
-    position: absolute;
-    width: 270px;
-    height: 114.13px;
-    left: 245px;
-    top: 335px;
+    grid-area: 8/3/12/7;
     background-image: url(./assets/dots\ hero\ section.svg);
 }
 
-.text-set{
-    line-height: var(--line); 
+.home-text {
+    grid-column: 3/11;
+    grid-row:9;  
     text-align: center;   
     color: var(--gray);
-}
-
-.home-text {
-    position: absolute;
-    width: 560px;
-    height: 64px;
-    left: 246px;
-    top: 347px;
-    
     font-size: var(--large-font-size)
 }
 
 .home-uder-text{
-    position: absolute;
-    width: 450px;
-    height: 64px;
-    left: 301px;
-    top: 383px;
-    
+    grid-column: 3/11;
+    grid-row:10;  
+    text-align: center;   
+    color: var(--gray);
     font-size: var(--small-font-size)
 }
 
 .home-box{
     box-sizing: border-box;
-    width: 560px;
-    height: 64px;
     border: 1px solid var(--wierd-blue);
     border-radius: 4px;
 }
 
-.login-box{
-    position: absolute;
-    left: 245px;
-    top: 523px;
+.home-box:nth-of-type(1){
+    grid-area:13/3/15/10;
 }
 
-.pass-box{
-    position: absolute;
-    left: 245px;
-    top: 645px;
+.home-box:nth-of-type(2){
+    grid-area:17/3/19/10;
 }
-
 
 .login-text{
-    position: absolute;
-    left: 245px;
-    top: 477px;
+    grid-column: 3;
+    grid-row:12;  
+    color: var(--gray);
 }
 
 .pass-text{
-    position: absolute;
-    left: 245px;
-    top: 599px;
+    grid-column: 3;
+    grid-row:16;  
+    color: var(--gray);
 }
 
 .forgot-text{
-    position: absolute;
-    left: 671px;
-    top: 697px;
+    grid-column: 8/11;
+    grid-row:19;  
+    color: var(--gray);
 }
 
 .no-acc{
-    position: absolute;
-    left: 245px;
-    top: 697px;
+    grid-column: 3/6;
+    grid-row:19;  
+    color: var(--gray);
 }
 
 .log{
-    position: absolute;
     width: 80px;
     height: 50px;
-    left: 478px;
-    top: 781px;
+    grid-column:6;
+    grid-row:20;
 }
 
 .about-dots{
-    position: absolute;
-    width: 330px;
-    height: 114.13px;
-    left: 1051px;
-    top: 1191px;
+    grid-area: 5/16/7/21;
     background-image: url(./assets/dots\ about\ section.svg);
 }
 
 .about-pos{
-    position: absolute;
-    width: 805px;
-    height: 64px;
-    left: 565px;
-    top: 1209px;
-
-    font-size: var(--large-font-size)
+    grid-area: 5/8/6/21;
+    font-size: var(--large-font-size);
+    color: var(--gray);
 }
 
 .about-back{
-    position: absolute;
-    width: 1720px;
-    height: 654px;
-    left: 100px;
-    top: 1388px;
-
+    grid-area:8/1/25/25;
     background: var(--lighter-yellow);
     border-radius: 8px;
+}
+
+.about-section {
+    height: 100vh;
+    padding-top: 70px;
+}
+
+.card-1{
+    display: flex;
+    background-color: var(--white);
+    grid-area: 10/3/16/13;
+    border-radius: var(--outer-radius);
+    padding: 1.5rem;
+}
+
+.card-2{
+    display: flex;
+    background-color: var(--white);
+    grid-area: 17/3/23/13;
+    border-radius: var(--outer-radius);
+    padding: 1.5rem;
+}
+
+.card-3{
+    display: flex;
+    background-color: var(--white);
+    grid-area: 10/14/16/24;
+    border-radius: var(--outer-radius);
+    padding: 1.5rem;
+}
+
+.card-4{
+    display: flex;
+    background-color: var(--white);
+    grid-area: 17/14/23/24;
+    border-radius: var(--outer-radius);
+    padding: 1.5rem;
+}
+
+.header{
+    color:var(--almost-brown);
+    text-align: center; 
+    font-size: var(--medium-font-size);
+}
+
+.inside{
+    padding: 20px;
+    color:var(--gray);
+    text-align: center; 
+    font-size: var(--medium-font-size);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
