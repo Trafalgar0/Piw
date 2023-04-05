@@ -2,6 +2,7 @@
 
 var listItems = document.getElementsByTagName("li");
 var i;
+var children;
 for(i=0;i<listItems.length;i++)
 {
     listItems[i].appendChild(addX());
@@ -24,9 +25,21 @@ function addX()
 
 var list = document.querySelector('ul');
 list.addEventListener('click', function(event) {
-  if (event.target.tagName === 'LI') {
+  if(event.target.classList.contains('checked'))
+  {
     event.target.classList.toggle('checked');
+    event.target.removeChild(event.target.lastChild)
   }
+  else if (event.target.tagName === 'LI') {
+    var time = new Date();
+    event.target.classList.toggle('checked');
+
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode(" Completed: " + time.toDateString());
+
+    event.target.appendChild(span.appendChild(txt)); 
+  }
+ 
 });
 
 
@@ -44,4 +57,6 @@ function newTask()
       i++;
     }
     document.getElementById("in").value = "";
+
+    children = li.childElementCount;
 }
