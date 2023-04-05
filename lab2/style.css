@@ -145,3 +145,10 @@ ul li.checked {
     border-radius: 1rem;
     color: white; 
 }
+
+.content
+{
+    overflow: hidden;
+    max-height: 0;
+    
+}

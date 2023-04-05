@@ -60,3 +60,42 @@ function newTask()
 
     children = li.childElementCount;
 }
+
+function newTask2()
+{
+    var li = document.createElement("li");
+    var inputValue = document.getElementById("in").value;
+    var t = document.createTextNode(inputValue);
+    li.appendChild(t);
+    if (inputValue === '') {
+      alert("Puste pole!");
+    } else {
+      document.getElementById("l2").appendChild(li);
+      listItems[i].appendChild(addX());
+      i++;
+    }
+    document.getElementById("in").value = "";
+
+    children = li.childElementCount;
+}
+
+
+document.querySelectorAll('.butn').forEach(button=>
+    {
+        button.addEventListener('click', ()=>{
+
+            const accordingList= button.nextElementSibling;
+
+            button.classList.toggle('active');
+
+            if(button.classList.contains('active'))
+            {
+                accordingList.style.maxHeight =  accordingList.scrollHeight + "px";
+            }
+            else
+            {
+                accordingList.style.maxHeight = 0;
+            }
+        });
+    }
+);
