@@ -1,0 +1,14 @@
+[
+    {
+      "text": "Book meeting",
+      "path": "/"
+    },
+    {
+      "text": "Add New",
+      "path": "/addNew"
+    },
+    {
+      "text": "Log in",
+      "path": "/logIn"
+    }
+]
