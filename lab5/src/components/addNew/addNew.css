@@ -1,0 +1,16 @@
+.addNew form div {
+  display: flex;
+}
+.addNew textarea {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.addNew input {
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+.addNew form {
+  padding: 30px;
+}

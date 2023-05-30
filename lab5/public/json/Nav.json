@@ -1,0 +1,10 @@
+[
+    {
+      "text": "Book meeting",
+      "path": "/"
+    },
+    {
+      "text": "Add New",
+      "path": "/addNew"
+    }
+]

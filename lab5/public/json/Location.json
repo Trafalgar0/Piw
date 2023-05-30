@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "name": "Wrocław",
+      "cover": "./images/location/city-1.png"
+    },
+    {
+      "id": 2,
+      "name": "Kraków",
+      "cover": "./images/location/city-2.png"
+    },
+    {
+      "id": 3,
+      "name": "Warszawa",
+      "cover": "./images/location/city-3.png"
+    }
+]
